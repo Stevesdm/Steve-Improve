@@ -27,15 +27,15 @@ public class HashMapDemo01Test {
         map.put("地理", 6);
         map.put("生物", 7);
         map.put("化学", 8);
-        map.put(null,2);
-        for(Map.Entry<String, Integer> entry : map.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue() );
+        map.put(null, 2);
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
 
         }
         System.out.println(map.containsValue(null));
         System.out.println(map.containsKey(null));
 
-        System.out.println(2<<4);
+        System.out.println(2 << 4);
 
         System.out.println(DigestUtils.sha256Hex("stevejobson"));
 
@@ -53,9 +53,9 @@ public class HashMapDemo01Test {
         map.put("地理", 6);
         map.put("生物", 7);
         map.put("化学", 8);
-        map.put(null,2);
-        for(Map.Entry<String, Integer> entry : map.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue() );
+        map.put(null, 2);
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
 
         }
         System.out.println(map.containsValue(null));

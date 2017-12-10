@@ -20,10 +20,10 @@ public class AutoBoxingPerformance {
      * 两段程序的执行时间差距很大
      */
     @Test
-    public void demo1(){
+    public void demo1() {
         long start = System.currentTimeMillis();
         Long sum = 0L;
-        for (long i = 0; i < Integer.MAX_VALUE; i++){
+        for (long i = 0; i < Integer.MAX_VALUE; i++) {
             sum += i;
         }
         System.out.println(sum);
@@ -32,10 +32,10 @@ public class AutoBoxingPerformance {
     }
 
     @Test
-    public void demo2(){
+    public void demo2() {
         long start = System.currentTimeMillis();
         long sum = 0L;
-        for (long i = 0; i < Integer.MAX_VALUE; i++){
+        for (long i = 0; i < Integer.MAX_VALUE; i++) {
             sum += i;
         }
         System.out.println(sum);

@@ -11,7 +11,7 @@ import java.util.Map;
  */
 public class HashMapDemo01 {
 
-    public  void test01() {
+    public void test01() {
         HashMap<String, Integer> map = new HashMap<String, Integer>();
         map.put("语文", 1);
         map.put("数学", 2);
@@ -22,7 +22,7 @@ public class HashMapDemo01 {
         map.put("生物", 7);
         map.put("化学", 8);
 
-        for(Map.Entry<String, Integer> entry : map.entrySet()) {
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
 
