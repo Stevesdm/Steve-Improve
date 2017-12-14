@@ -1,4 +1,4 @@
-package steve;
+package com.steve.blockqueue;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
@@ -12,7 +12,9 @@ import java.util.concurrent.LinkedBlockingDeque;
  */
 public class Test {
 
-    public static void main(String[] args) throws Exception {
+
+    @org.junit.Test
+    public void test() throws Exception{
 
         BlockingQueue<String> queue = new LinkedBlockingDeque<>(20);
         Producer producer1 = new Producer(queue);

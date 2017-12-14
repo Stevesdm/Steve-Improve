@@ -1,4 +1,4 @@
-package steve;
+package com.steve.blockqueue;
 
 import java.util.PrimitiveIterator;
 import java.util.Random;
