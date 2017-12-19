@@ -2,6 +2,8 @@ package com.steve.reflect;
 
 import org.junit.Test;
 
+import java.lang.reflect.Proxy;
+
 /**
  * @Description:
  * @Author: stevejobson

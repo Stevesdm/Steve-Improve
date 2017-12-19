@@ -10,7 +10,7 @@ import com.steve.reflect.annotation.DemoAnnotation;
 @DemoAnnotation(name = "aaa")
 public class User {
 
-    static{
+    static {
         System.out.println("user load .....");
     }
 
