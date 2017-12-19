@@ -14,7 +14,7 @@ public class Test {
 
 
     @org.junit.Test
-    public void test() throws Exception{
+    public void test() throws Exception {
 
         BlockingQueue<String> queue = new LinkedBlockingDeque<>(20);
         Producer producer1 = new Producer(queue);

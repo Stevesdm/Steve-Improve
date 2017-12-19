@@ -14,11 +14,11 @@ public class MyInvocationHandler implements InvocationHandler {
     private Object target;
 
     public MyInvocationHandler(Object target) {
-        this.target=target;
+        this.target = target;
     }
 
     public Object getProxy() {
-        return Proxy.newProxyInstance(target.getClass().getClassLoader(),target.getClass().getInterfaces(),this);
+        return Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), this);
     }
 
     @Override

@@ -8,13 +8,14 @@ package com.steve.ThreadLocal;
 public class Test {
 
     public static void main(String[] args) {
-            HelloThreadLocal hello = new HelloThreadLocal();
-            DemoThread t1 = new DemoThread(hello);
-            DemoThread t2 = new DemoThread(hello);
-            DemoThread t3 = new DemoThread(hello);
+        HelloThreadLocal hello = new HelloThreadLocal();
+        DemoThread t1 = new DemoThread(hello);
+        DemoThread t2 = new DemoThread(hello);
+        DemoThread t3 = new DemoThread(hello);
 
-            t1.start();
-            t2.start();;
-            t3.start();
+        t1.start();
+        t2.start();
+        ;
+        t3.start();
     }
 }

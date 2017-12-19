@@ -1,17 +1,20 @@
 package com.steve.reflect;
 
+import com.steve.reflect.annotation.DemoAnnotation;
+
 /**
  * @Description:
  * @Author: stevejobson
  * @CreateDate: 2017/12/18 下午10:32
  */
+@DemoAnnotation(name = "aaa")
 public class User {
 
-    private int uid = 1000;
+    private int uid;
 
-    private String uname = "steve";
+    private String uname;
 
-    private int age = 18;
+    private int age;
 
     private String address = "sy";
 
@@ -61,5 +64,15 @@ public class User {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "uid=" + uid +
+                ", uname='" + uname + '\'' +
+                ", age=" + age +
+                ", address='" + address + '\'' +
+                '}';
     }
 }

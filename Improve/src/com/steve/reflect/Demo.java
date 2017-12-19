@@ -3,9 +3,7 @@ package com.steve.reflect;
 import org.junit.Test;
 
 import java.lang.annotation.Annotation;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
+import java.lang.reflect.*;
 
 /**
  * @Description:
@@ -15,8 +13,16 @@ import java.lang.reflect.Modifier;
 public class Demo {
 
     @Test
-    public void test(){
-        Class userClass = User.class;
+    public void test() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException, NoSuchFieldException {
+//        Class userClass = User.class;
+
+
+        Class userClass = null;
+        try {
+            userClass = Class.forName("com.steve.reflect.User");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
         //class name
         System.out.println(userClass.getName());
@@ -24,7 +30,10 @@ public class Demo {
         //simple name
         System.out.println(userClass.getSimpleName());
 
-        int modifiers= userClass.getModifiers();
+        Package pac = userClass.getPackage();
+        System.out.println(pac);
+
+        int modifiers = userClass.getModifiers();
         System.out.println(Modifier.isAbstract(modifiers));
         System.out.println(Modifier.isFinal(modifiers));
         System.out.println(Modifier.isInterface(modifiers));
@@ -45,26 +54,48 @@ public class Demo {
         System.out.println(parentClass.getSimpleName());
 
         Class[] interfaces = userClass.getInterfaces();
+        System.out.println("-----");
         for (Class c : interfaces) {
+            System.out.println(c);
             System.out.println(c.getSimpleName());
         }
+        System.out.println("------");
 
         Constructor[] constructors = userClass.getConstructors();
-        for (Constructor constructor: constructors) {
+        System.out.println("-------");
+        for (Constructor constructor : constructors) {
             System.out.println(constructor.getName());
         }
+        System.out.println("-------");
+        Constructor con = userClass.getConstructor(new Class[]{int.class});
+        System.out.println(con.getName());
+        User user1 = (User) con.newInstance(1);
+        System.out.println(user1);
+        System.out.println("---------000-----");
+
 
         Method[] methods = userClass.getMethods();
-        for (Method method: methods) {
+        System.out.println("------");
+        for (Method method : methods) {
+            System.out.println(method);
             System.out.println(method.getName());
         }
+
+
+        Field[] fields = userClass.getFields();
+        for (Field f : fields) {
+            System.out.println(f.getName());
+        }
+
+
+        System.out.println("------");
 
         Annotation[] annotations = userClass.getAnnotations();
 
 
         User user;
         try {
-            user = (User)userClass.newInstance();
+            user = (User) userClass.newInstance();
             System.out.println(user);
         } catch (InstantiationException e) {
             e.printStackTrace();
