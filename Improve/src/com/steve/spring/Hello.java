@@ -11,6 +11,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class Hello {
 
+    static{
+        System.out.println("hello bean load...");
+    }
+
     @Autowired
     private MessageService service;
 

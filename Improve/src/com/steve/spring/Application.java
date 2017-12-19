@@ -16,6 +16,7 @@ public class Application {
     @Bean
     @Lazy()
     public MessageService getMessageService() {
+
         return new MessageService() {
             @Override
             public String getMessage() {

@@ -10,6 +10,10 @@ import com.steve.reflect.annotation.DemoAnnotation;
 @DemoAnnotation(name = "aaa")
 public class User {
 
+    static{
+        System.out.println("user load .....");
+    }
+
     private int uid;
 
     private String uname;
