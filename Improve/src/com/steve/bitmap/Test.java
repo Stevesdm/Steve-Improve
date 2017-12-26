@@ -22,8 +22,6 @@ public class Test {
             array[i] = random.nextInt(10000000);
         }
 
-        
-
         for(int j = 0; j <array.length;  j++)
         {
             bitSet.set(array[j], true);
