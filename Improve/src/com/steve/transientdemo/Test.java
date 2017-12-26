@@ -36,6 +36,7 @@ public class Test {
     }
 
     //transient修饰的不进行序列化
+    //static修饰的从不序列化
     @org.junit.Test
     public void test2() throws IOException, ClassNotFoundException {
         User2 user2 = new User2();
