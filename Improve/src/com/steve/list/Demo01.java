@@ -2,6 +2,7 @@ package com.steve.list;
 
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * @Description:
@@ -16,5 +17,7 @@ public class Demo01 {
         //asList参数是泛型，传基本类型进去返回集合大小为1，如果换为Integer则返回true
         int[] a = {1, 2, 3, 4, 5};
         System.out.println(Arrays.asList(a).contains(2));
+
+
     }
 }
