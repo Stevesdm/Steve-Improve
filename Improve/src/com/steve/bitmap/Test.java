@@ -21,6 +21,7 @@ public class Test {
         for (int i = 0; i < num ; i++) {
             array[i] = random.nextInt(10000000);
         }
+        
 
         for(int j = 0; j <array.length;  j++)
         {
