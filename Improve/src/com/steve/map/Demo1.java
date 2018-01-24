@@ -12,6 +12,21 @@ public class Demo1 {
 
     public static void main(String[] args) {
         Map<UserInfo,String> map = new TreeMap<>();
+        UserInfo u1 = new UserInfo(1, 21, "name1");
+        UserInfo u2 = new UserInfo(2, 27, "name1");
+        UserInfo u3 = new UserInfo(3, 15, "name1");
+        UserInfo u4 = new UserInfo(5, 24, "name1");
+        UserInfo u5 = new UserInfo(4, 24, "name1");
+        map.put(u1,"u1");
+        map.put(u2,"u2");
+        map.put(u3,"u3");
+        map.put(u4,"u4");
+        map.put(u5,"u5");
+        System.out.println(map.get(u3));
+
+        for (Map.Entry entry : map.entrySet()){
+            System.out.println(entry.getValue());
+        }
 
     }
     
