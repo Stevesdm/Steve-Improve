@@ -17,6 +17,7 @@ public class FieldTest {
         User u = new User(1111);
 
         Field field = User.class.getDeclaredField("uid");
+        System.out.println(field.isAccessible());
         field.setAccessible(true);
         int value = (int) field.get(u);
         System.out.println(value);

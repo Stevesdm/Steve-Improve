@@ -15,9 +15,9 @@ public class Demo2 {
     public void test() throws ClassNotFoundException {
 
         //执行的时候不会加载类，也不会执行静态代码
-        //Class userClass = User.class;
+        Class userClass = User.class;
 
         //要求jvm执行指定的类，并加载该类，执行静态代码
-        Class userClass = Class.forName("com.steve.reflect.User");
+        //Class userClass = Class.forName("com.steve.reflect.User");
     }
 }

@@ -13,5 +13,10 @@ public class Demo {
         String str ="a,v,c,,";
         String[] d = str.split(",");
         System.out.println(d.length);
+
+        int a = 321;
+
     }
+
+
 }
